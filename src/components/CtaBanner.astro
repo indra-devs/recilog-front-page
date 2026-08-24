@@ -1,0 +1,23 @@
+---
+import Button from "./Button.astro";
+
+interface Props {
+	title?: string;
+	subtitle?: string;
+}
+
+const {
+	title = "Gestión integral de residuos, sin complicaciones",
+	subtitle = "Servicio seguro, rápido y con disposición final autorizada.",
+} = Astro.props;
+---
+
+<section class="flex flex-col items-center gap-6 bg-recilog-green-bg px-4 py-16 sm:px-6 md:px-10 md:py-20 lg:px-16 lg:py-[100px] xl:px-24 2xl:px-[240px]">
+	<p class="w-full text-center font-heading text-3xl leading-tight font-extrabold text-recilog-green sm:text-4xl md:text-6xl lg:text-[84px] lg:leading-[72px]">
+		{title}
+	</p>
+	<p class="w-full text-center font-heading text-lg text-recilog-dark md:text-2xl lg:text-[34px]">
+		{subtitle}
+	</p>
+	<Button label="¡HABLEMOS!" href="#contacto" />
+</section>

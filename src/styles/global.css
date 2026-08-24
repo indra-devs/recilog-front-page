@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@import "@fontsource-variable/plus-jakarta-sans";
+@import "@fontsource/dm-sans/400.css";
+@import "@fontsource/dm-sans/500.css";
+
+@theme {
+  --color-recilog-green: #2e9437;
+  --color-recilog-green-light: #8bbf3c;
+  --color-recilog-green-soft: #52a659;
+  --color-recilog-green-bg: #eaf4eb;
+  --color-recilog-mint: #f3f9ec;
+  --color-recilog-dark: #222831;
+  --color-recilog-gray: #5a607f;
+  --color-recilog-gray-light: #9196b1;
+  --color-recilog-border: #cccfdb;
+  --color-recilog-border-light: #eaebf0;
+  --color-recilog-bg: #f9f9fb;
+  --color-recilog-footer: #37353e;
+
+  --font-heading: "Plus Jakarta Sans Variable", sans-serif;
+  --font-sans: "DM Sans", sans-serif;
+}

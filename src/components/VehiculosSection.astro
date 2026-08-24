@@ -1,0 +1,73 @@
+---
+type Categoria = {
+	titleAccent: string;
+	title: string;
+	description: string;
+	images: [string, string];
+};
+
+const categorias: Categoria[] = [
+	{
+		titleAccent: "Camiones",
+		title: "Amplirroll",
+		description:
+			"Contamos con una flota de camiones AMPLIRROLL para el transporte de residuos no peligroso de la industria como por ejemplo: Tierra orgánica, Viruta de madera, residuos sólidos, domiciliarios etc.",
+		images: ["/images/vehiculos/amplirroll-1.webp", "/images/vehiculos/amplirroll-2.webp"],
+	},
+	{
+		titleAccent: "Camión Tolva",
+		title: "Multibucket",
+		description:
+			"Para el retiro de materiales y residuos provenientes de la construcción, nuestra flota de camiones con tolvas de 9 m3 aprox. es especial para estos trabajos, garantizando cargas de materiales más rápidas y eficientes en las obras.",
+		images: ["/images/vehiculos/multibucket-1.webp", "/images/vehiculos/multibucket-2.webp"],
+	},
+	{
+		titleAccent: "Contendores",
+		title: "para residuos",
+		description:
+			"En CM TRASNPORTES contamos con contenedores para residuos no peligros, con esto contamos con una amplia gama de servicios enfocados siempre a solucionar los que nuestros clientes necesitan.",
+		images: ["/images/vehiculos/contenedores-1.webp", "/images/vehiculos/contenedores-2.webp"],
+	},
+];
+---
+
+<section class="relative overflow-hidden bg-white px-4 py-12 sm:px-6 md:px-10 md:py-16 lg:px-16 lg:py-[60px] xl:px-24 2xl:px-[240px]">
+	<img
+		src="/images/illustrations/blueprint-bg.png"
+		alt=""
+		class="pointer-events-none absolute top-0 left-0 hidden h-auto md:block md:w-[35%] lg:w-[46%]"
+	/>
+
+	<div class="relative z-10 flex flex-col items-center gap-10 md:gap-[60px]">
+		<h2 class="text-center font-heading text-3xl font-bold text-recilog-dark md:text-4xl lg:text-[54px]">
+			Vehículos y <span class="text-recilog-green-light">Conten</span><span class="text-recilog-green"
+				>edores</span
+			>
+		</h2>
+
+		<div class="flex w-full flex-col gap-10 md:gap-[60px]">
+			{
+				categorias.map((categoria) => (
+					<div class="flex w-full flex-col items-center gap-6">
+						<div class="flex flex-col items-center gap-2 text-center">
+							<p class="font-heading text-2xl font-extrabold text-recilog-green-light md:text-3xl lg:text-[40px]">
+								{categoria.titleAccent} <span class="text-recilog-green">{categoria.title}</span>
+							</p>
+							<p class="max-w-[896px] text-[15px] text-recilog-gray">{categoria.description}</p>
+						</div>
+
+						<div class="grid w-full grid-cols-1 gap-6 sm:grid-cols-2">
+							{categoria.images.map((image) => (
+								<img
+									src={image}
+									alt={`${categoria.titleAccent} ${categoria.title}`}
+									class="aspect-[708/500] w-full rounded-2xl object-cover"
+								/>
+							))}
+						</div>
+					</div>
+				))
+			}
+		</div>
+	</div>
+</section>

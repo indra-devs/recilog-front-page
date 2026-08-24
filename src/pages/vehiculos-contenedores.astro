@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import VehiculosSection from "../components/VehiculosSection.astro";
+import CtaBanner from "../components/CtaBanner.astro";
+import GaleriaSection from "../components/GaleriaSection.astro";
+import AboutContactSection from "../components/AboutContactSection.astro";
+import Footer from "../components/Footer.astro";
+import WhatsappButton from "../components/WhatsappButton.astro";
+---
+
+<Layout title="Vehículos y Contenedores — RECILOG">
+	<Navbar />
+	<VehiculosSection />
+	<CtaBanner
+		title="Servicios centrados en el cliente"
+		subtitle="Soluciones a tu medida para cumplir objetivos y plazos."
+	/>
+	<GaleriaSection />
+	<AboutContactSection bgClass="bg-recilog-mint" />
+	<Footer />
+	<WhatsappButton />
+</Layout>

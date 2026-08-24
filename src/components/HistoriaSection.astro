@@ -1,0 +1,91 @@
+---
+type Entry = { date: string; text: string; side: "left" | "right" };
+
+const entries: Entry[] = [
+	{
+		side: "left",
+		date: "30/12/2004",
+		text: "Inicio Actividades y su objetivo la explotación del Servicio de Transporte de Carga, sea pública o privada, por cuenta propia o ajena, dentro o fuera del territorio nacional",
+	},
+	{
+		side: "right",
+		date: "30/12/2004",
+		text: "Resolución sanitaria N° 20249 autoriza el transporte de residuos no peligrosos en tolvas protegidas y contenedores autocompactadores.",
+	},
+	{
+		side: "left",
+		date: "08/2010",
+		text: "Ampliamos nuestro giro comercial en la construcción y arriendo de tolvas metálicas para traslados de residuos, contando en la actualidad con un listado de clientes que requieren tratamiento especial en el traslado de sus residuos.",
+	},
+	{
+		side: "right",
+		date: "10/2010",
+		text: "Ante la solicitud de nuestro clientes, comenzamos a hacer crecer nuestra flota de camiones y contenedores para los residuos de empresas de regiones.",
+	},
+	{
+		side: "left",
+		date: "2010 y 2016",
+		text: "En forma mensual realizamos más de 1.500 retiros entre tolvas de 30 m3 con residuos recepcionados por CMPC (Sorepa), camiones tipo tolva para residuos de la construcción y en camiones con sistema ampliroll para áreas industriales.",
+	},
+	{
+		side: "right",
+		date: "10/2010",
+		text: "Recilog fue creada en febrero de 2018 para recibir residuos derivados de la construcción. Mediante la Resolución SEREMI de Salud N° 878 del 15 de enero de 2019, se autorizó el proyecto en Camino Campo Alegre, Lote 2B, Hijuela 4, comuna de Pudahuel.",
+	},
+	{
+		side: "left",
+		date: "07/2010",
+		text: "Nuevo servicio para residuos domiciliarios e industriales con dos tolvas de 9 m³ en un solo camión, que reduce viajes y baja costos de combustible y conductor.",
+	},
+	{
+		side: "right",
+		date: "02/2019",
+		text: "En el mes de febrero nos trasladamos a las nuevas dependencias en las Acacias 1953 en la Comuna de San Bernardo, con una propiedad de 15.000 m2, con dependencias, talleres y bomba de combustible propia autorizada por la SEC.",
+	},
+];
+---
+
+<section class="relative overflow-hidden bg-white px-4 py-12 sm:px-6 md:px-10 md:py-16 lg:px-16 lg:py-[60px] xl:px-24 2xl:px-[240px]">
+	<img
+		src="/images/contacto/hojas-1.png"
+		alt=""
+		class="pointer-events-none absolute -top-16 -left-16 hidden w-[280px] -scale-x-100 md:block md:w-[360px] lg:w-[440px]"
+	/>
+
+	<h2 class="relative z-10 mb-12 text-center font-heading text-3xl font-bold text-recilog-dark md:mb-16 md:text-4xl lg:text-[54px]">
+		Historia <span class="text-recilog-green">RECILOG</span>
+	</h2>
+
+	<div class="relative z-10 mx-auto max-w-[1440px]">
+		<div
+			aria-hidden="true"
+			class="pointer-events-none absolute top-0 left-5 h-full w-14 -translate-x-1/2 bg-[url('/images/nosotros/timeline-connector.png')] bg-repeat-y bg-top bg-[length:56px_auto] lg:left-1/2 lg:w-20 lg:bg-[length:80px_auto]"
+		/>
+
+		<ol class="flex flex-col gap-10 lg:gap-6">
+			{
+				entries.map((entry) => (
+					<li class="relative pl-14 lg:grid lg:grid-cols-2 lg:gap-x-16 lg:pl-0">
+						{entry.side === "left" ? (
+							<>
+								<div class="lg:pr-14 lg:text-right">
+									<p class="font-heading text-lg font-bold text-recilog-green">{entry.date}</p>
+									<p class="mt-1 text-[16px] text-recilog-gray">{entry.text}</p>
+								</div>
+								<div class="hidden lg:block" />
+							</>
+						) : (
+							<>
+								<div class="hidden lg:block" />
+								<div class="lg:pl-14">
+									<p class="font-heading text-lg font-bold text-recilog-green">{entry.date}</p>
+									<p class="mt-1 text-[16px] text-recilog-gray">{entry.text}</p>
+								</div>
+							</>
+						)}
+					</li>
+				))
+			}
+		</ol>
+	</div>
+</section>

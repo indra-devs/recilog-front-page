@@ -1,0 +1,28 @@
+---
+import Button from "./Button.astro";
+---
+
+<section class="relative flex h-[500px] w-full items-center overflow-hidden px-4 sm:px-6 md:h-[600px] md:px-10 lg:h-[800px] lg:px-16 xl:px-24 2xl:px-[240px]">
+	<img
+		src="/images/hero/hero-truck.png"
+		alt="Camión de RECILOG transportando materiales"
+		class="absolute inset-0 h-full w-full object-cover"
+	/>
+	<div class="absolute inset-0 bg-black opacity-30"></div>
+
+	<div class="relative z-10 flex w-full flex-col items-start gap-4 md:gap-6">
+		<div class="flex w-full flex-col items-start gap-3 text-center text-white md:gap-5 lg:gap-7">
+			<h1 class="w-full font-heading text-[32px] leading-tight font-extrabold uppercase md:text-[48px] lg:text-[74px] lg:leading-[72px]">
+				<span class="block"><span class="text-recilog-green-light">Movemos</span> materiales,</span>
+				<span class="block">impulsamos <span class="text-recilog-green">proyectos</span></span>
+			</h1>
+			<p class="w-full font-heading text-base md:text-lg lg:text-[26px]">
+				Más de <span class="font-extrabold">15 años</span> moviendo materiales no peligrosos para
+				obras e industria.
+			</p>
+		</div>
+		<div class="flex w-full flex-col items-center justify-center">
+			<Button label="¡HABLEMOS!" href="#contacto" />
+		</div>
+	</div>
+</section>

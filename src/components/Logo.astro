@@ -1,0 +1,12 @@
+---
+interface Props {
+	class?: string;
+}
+
+const { class: className = "" } = Astro.props;
+---
+
+<a href="/" class={`flex h-[38px] shrink-0 items-center ${className}`} aria-label="RECILOG">
+	<img src="/images/logo/logo-part1.svg" alt="" class="h-full w-auto" />
+	<img src="/images/logo/logo-part2.svg" alt="" class="h-full w-auto" />
+</a>

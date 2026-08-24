@@ -1,0 +1,21 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import ServiciosListSection from "../components/ServiciosListSection.astro";
+import CtaBanner from "../components/CtaBanner.astro";
+import AboutContactSection from "../components/AboutContactSection.astro";
+import Footer from "../components/Footer.astro";
+import WhatsappButton from "../components/WhatsappButton.astro";
+---
+
+<Layout title="Servicios — RECILOG">
+	<Navbar />
+	<ServiciosListSection />
+	<CtaBanner
+		title="Mejoramos cada día para darte soluciones reales"
+		subtitle="Empresas grandes y pequeñas confían en nosotros, todos los días."
+	/>
+	<AboutContactSection bgClass="bg-recilog-mint" />
+	<Footer />
+	<WhatsappButton />
+</Layout>

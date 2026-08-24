@@ -1,0 +1,117 @@
+---
+import Button from "./Button.astro";
+
+interface Props {
+	bgClass?: string;
+}
+
+const { bgClass = "bg-white" } = Astro.props;
+
+const inputClasses =
+	"peer h-[45px] w-full rounded border border-recilog-border bg-white pl-11 pr-4 font-sans text-[14px] text-recilog-dark placeholder:text-recilog-gray-light focus:outline-recilog-green";
+---
+
+<section id="contacto" class={`flex flex-col items-center gap-6 px-4 py-12 sm:px-6 md:px-10 md:py-16 lg:flex-row lg:px-16 lg:py-[60px] xl:px-24 2xl:px-[240px] ${bgClass}`}>
+	<div class="flex w-full flex-col items-start gap-6 p-0 md:p-6 lg:max-w-[708px] lg:flex-1 lg:p-10">
+		<p class="font-heading text-[18px] font-bold text-recilog-dark">¡CONOZCA MÁS DE NOSOTROS!</p>
+		<h2 class="font-heading text-[50px] leading-[48px] font-bold text-recilog-dark">
+			<span class="text-recilog-green-light">¿Quiénes somos? </span><span
+				class="text-recilog-green">¿Dónde estamos?</span
+			> y cuales son nuestros servicios.
+		</h2>
+		<p class="text-[18px] text-recilog-gray">
+			En <span class="font-bold text-recilog-green">Recilog</span> contamos con más de 15.000 m² de
+			instalaciones, que incluyen oficinas, talleres de mantención para nuestra flota, áreas para
+			contenedores y una bomba de combustible propia, autorizada por la <span class="font-bold"
+				>SEC</span
+			>.
+		</p>
+
+		<div class="flex w-full items-center gap-3 rounded-xl border border-recilog-border-light bg-recilog-bg p-5">
+			<span class="relative inline-block size-6 shrink-0">
+				<img src="/images/icons/location-1.svg" alt="" class="absolute" style="top: 29.96%; left: 37%; width: 26%; height: 26%" />
+				<img src="/images/icons/location-2.svg" alt="" class="absolute" style="top: 8.33%; left: 14.07%; width: 71.84%; height: 83.32%" />
+			</span>
+			<p class="flex-1 text-[18px] text-recilog-dark">Las Acacias 1953, San Bernardo, Santiago</p>
+		</div>
+
+		<div class="flex w-full flex-col items-start gap-6 sm:flex-row">
+			<div class="flex w-full flex-1 items-center gap-3 rounded-xl border border-recilog-border-light bg-recilog-bg p-5">
+				<span class="relative inline-block size-6 shrink-0">
+					<img src="/images/icons/call-1.svg" alt="" class="absolute" style="top: 5.21%; left: 5.21%; width: 89.46%; height: 89.58%" />
+					<img src="/images/icons/call-2.svg" alt="" class="absolute" style="top: 19.79%; left: 59.37%; width: 20.84%; height: 20.84%" />
+					<img src="/images/icons/call-3.svg" alt="" class="absolute" style="top: 5.21%; left: 59.38%; width: 35.41%; height: 35.41%" />
+				</span>
+				<p class="text-[18px] text-recilog-dark">
+					<span class="font-bold text-recilog-green">Teléfono:</span><br />+569 9105 60 45
+				</p>
+			</div>
+			<div class="flex w-full flex-1 items-center gap-3 rounded-xl border border-recilog-border-light bg-recilog-bg p-5">
+				<span class="relative inline-block size-6 shrink-0">
+					<img src="/images/icons/sms-1.svg" alt="" class="absolute" style="top: 11.46%; left: 5.21%; width: 89.58%; height: 77.08%" />
+					<img src="/images/icons/sms-2.svg" alt="" class="absolute" style="top: 34.37%; left: 26.04%; width: 47.92%; height: 19.23%" />
+				</span>
+				<p class="text-[18px] text-recilog-dark">
+					<span class="font-bold text-recilog-green">Correo electrónico:</span><br />servicios@recilog.cl
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<form class="flex w-full flex-col items-start gap-6 rounded-[20px] border border-recilog-border-light bg-recilog-bg p-6 md:p-10 lg:max-w-[708px] lg:flex-1 lg:p-[50px]">
+		<div class="flex flex-col items-start gap-2">
+			<p class="font-heading text-[32px] font-bold tracking-[3.2px] text-recilog-green">Escríbenos</p>
+			<p class="text-[18px] text-recilog-gray">
+				Te invitamos a dejar su información de contacto y nos pondremos en contacto en breve.
+			</p>
+		</div>
+
+		<div class="flex w-full flex-col gap-6">
+			<div class="flex w-full flex-col items-start gap-6 sm:flex-row">
+				<label class="relative w-full flex-1">
+					<span class="absolute top-0 left-[11px] -translate-y-1/2 bg-recilog-bg px-[5px] font-sans text-xs text-recilog-gray-light">Nombre</span>
+					<span class="absolute top-1/2 left-4 flex -translate-y-1/2 items-center">
+						<span class="relative inline-block size-[18px]">
+							<img src="/images/icons/form-user-1.svg" alt="" class="absolute" style="top: 5.21%; left: 26.04%; width: 47.92%; height: 47.91%" />
+							<img src="/images/icons/form-user-2.svg" alt="" class="absolute" style="top: 59.38%; left: 11.08%; width: 77.84%; height: 35.41%" />
+						</span>
+					</span>
+					<input type="text" name="nombre" placeholder="Escriba su Nombre" class={inputClasses} />
+				</label>
+				<label class="relative w-full flex-1">
+					<span class="absolute top-0 left-[11px] -translate-y-1/2 bg-recilog-bg px-[5px] font-sans text-xs text-recilog-gray-light">Teléfono</span>
+					<span class="absolute top-1/2 left-4 flex -translate-y-1/2 items-center">
+						<span class="relative inline-block size-[18px]">
+							<img src="/images/icons/form-phone-1.svg" alt="" class="absolute" style="top: 5.21%; left: 5.21%; width: 89.46%; height: 89.58%" />
+							<img src="/images/icons/form-phone-2.svg" alt="" class="absolute" style="top: 19.79%; left: 59.37%; width: 20.84%; height: 20.84%" />
+							<img src="/images/icons/form-phone-3.svg" alt="" class="absolute" style="top: 5.21%; left: 59.38%; width: 35.41%; height: 35.41%" />
+						</span>
+					</span>
+					<input type="tel" name="telefono" placeholder="Escriba su numero" class={inputClasses} />
+				</label>
+			</div>
+
+			<label class="relative w-full">
+				<span class="absolute top-0 left-[11px] -translate-y-1/2 bg-recilog-bg px-[5px] font-sans text-xs text-recilog-gray-light">Correo electrónico</span>
+				<span class="absolute top-1/2 left-4 flex -translate-y-1/2 items-center">
+					<span class="relative inline-block size-[18px]">
+						<img src="/images/icons/form-email-1.svg" alt="" class="absolute" style="top: 11.46%; left: 5.21%; width: 89.58%; height: 77.08%" />
+						<img src="/images/icons/form-email-2.svg" alt="" class="absolute" style="top: 34.37%; left: 26.04%; width: 47.92%; height: 19.23%" />
+					</span>
+				</span>
+				<input type="email" name="email" placeholder="Dirección de correo" class={inputClasses} />
+			</label>
+
+			<textarea
+				name="mensaje"
+				placeholder="Déjenos su mensaje aquí."
+				rows="4"
+				class="h-[150px] w-full rounded-lg border border-recilog-border bg-white p-4 font-sans text-[14px] text-recilog-dark placeholder:text-recilog-gray-light focus:outline-recilog-green"
+			></textarea>
+
+			<div class="flex w-full justify-end">
+				<Button label="ENVIAR" type="submit" />
+			</div>
+		</div>
+	</form>
+</section>
