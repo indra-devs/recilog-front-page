@@ -3,11 +3,21 @@ import Button from "./Button.astro";
 ---
 
 <section class="relative flex h-[500px] w-full items-center overflow-hidden px-4 sm:px-6 md:h-[600px] md:px-10 lg:h-[800px] lg:px-16 xl:px-24 2xl:px-[240px]">
-	<img
-		src="/images/hero/hero-truck.png"
-		alt="Camión de RECILOG transportando materiales"
+	<video
 		class="absolute inset-0 h-full w-full object-cover"
-	/>
+		poster="/videos/hero-truck-poster.jpg"
+		autoplay
+		muted
+		loop
+		playsinline
+		preload="auto"
+		aria-hidden="true"
+	>
+		<source src="/videos/hero-truck-mobile.webm" type="video/webm" media="(max-width: 767px)" />
+		<source src="/videos/hero-truck-mobile.mp4" type="video/mp4" media="(max-width: 767px)" />
+		<source src="/videos/hero-truck.webm" type="video/webm" />
+		<source src="/videos/hero-truck.mp4" type="video/mp4" />
+	</video>
 	<div class="absolute inset-0 bg-black opacity-30"></div>
 
 	<div class="relative z-10 flex w-full flex-col items-start gap-4 md:gap-6">
